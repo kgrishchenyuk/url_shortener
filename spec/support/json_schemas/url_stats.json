@@ -1,27 +1,17 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "URL",
-  "description": "access_restrictions schema",
+  "description": "URL schema",
   "type": "object",
-  "minItems": 0,
-  "uniqueItems": true,
-  "items": {
-    "type": "object",
-    "required": [
-      "level"
-    ],
-    "properties": {
-      "level": {
-        "type": "string",
-        "enum": [
-          "any",
-          "plus",
-          "bookmate",
-          "default",
-          "premium",
-          "audio",
-          "limited_audio"
-        ]
+  "additionalProperties": false,
+  "properties": {
+    "url": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "redirect_counter": {
+          "type": "integer"
+        }
       }
     }
   }
